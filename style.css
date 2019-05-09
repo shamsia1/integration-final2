@@ -1,0 +1,491 @@
+
+@font-face {
+    font-family: 'anironcregular';
+    src: url('fonts/aniron-webfont.woff2') format('woff2'),
+         url('fonts/aniron-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'party_businessregular';
+    src: url('fonts/partybusiness-webfont.woff2') format('woff2'),
+         url('fonts/partybusiness-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tengwar_annatarbold';
+    src: url('fonts/tnganb-webfont.woff2') format('woff2'),
+         url('fonts/tnganb-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  margin: auto;
+  font-family: party_businessregular, Arial, serif;
+  font-size: calc(1rem + 1vw);
+}
+
+h1, h2, h3, h5, .nav-link {
+  font-family: anironcregular, Arial, serif;
+}
+
+h2 {
+  font-size: calc(15px + 1vw);
+  margin: 2vw;
+}
+
+h2 .elveSymbol {
+  color: orange;
+  font-family: tengwar_annatarbold;
+}
+
+/* -------------------------------------- */
+/* Navbar                                 */
+/* -------------------------------------- */
+
+.navbar.navbar-expand-lg .nav-link {
+  color: white;
+  font-family: "anironcregular", Arial, serif;
+  font-size: 17px;
+}
+
+.navbar.navbar-expand-lg .nav-link:hover{
+  color: white;
+  text-decoration: underline white;
+}
+
+.navbar.navbar-expand-lg {
+  background-color: #FF7700;
+}
+
+.navbar.navbar-expand-lg .navbar-nav, .nav-item {
+  margin-left: auto;
+}
+
+.navbar.navbar-expand-lg .fa-bars{
+  color: white;
+}
+
+/* -------------------------------------- */
+/* Carousel                               */
+/* -------------------------------------- */
+
+.carousel-caption > h5{
+    font-size: 3.2vw;
+}
+
+.carousel-caption > p{
+    font-size: 1.4vw;
+}
+
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+}
+
+/* -------------------------------------- */
+/* Mise en page Sections                  */
+/* -------------------------------------- */
+/* nth-child Cible les éléments en fonction de leur position dans */
+section:nth-child(even) {
+  background-color: #2B2B2B;
+  color: white;
+}
+
+section:nth-child(odd) {
+  background-color: #EDEDED;
+  color: #2B2B2B;
+}
+
+section {
+  padding: 15px;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+
+/* -------------------------------------- */
+/* Section Fellows                        */
+/* -------------------------------------- */
+
+h2 em {
+  font-size: .6em;
+}
+
+/* Pills */
+
+.nav.nav-tabs .nav-item .nav-link {
+  background-color: transparent;
+  border: none;
+  color: grey;
+  text-align: center;
+  font-size: calc(10px + 0.8vw);
+  width: 100%;
+}
+
+.nav.nav-tabs .nav-item {
+  width: 100%;
+}
+
+.nav.nav-tabs .nav-item .nav-link.active {
+  color: orange;
+  text-decoration: underline orange;
+}
+
+.nav.nav-tabs .nav-item .nav-link .elveSymbol {
+  display: none;
+}
+
+.nav.nav-tabs .nav-item .nav-link.active .elveSymbol {
+  display: inline;
+  color: orange;
+  font-family: tengwar_annatarbold;
+}
+
+/* Wanted cards */
+
+.tab-pane.fade {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tab-content.row {
+  height: auto;
+}
+
+.wantedCard {
+  height: 600px;
+  margin-top: 15px;
+}
+
+.wantedCard .wantedPic {
+  height: 80%;
+}
+
+.wantedCard .legend {
+  height: 20%;
+  background-color: black;
+  color: white;
+  padding: 3px;
+  font-size: 1em;
+}
+
+.wantedCard:first-of-type .wantedPic {
+  background: url("gandalf.png") center no-repeat;
+  background-size: cover;
+}
+
+.wantedCard:nth-of-type(2) .wantedPic {
+  background: url("aragorn.png") center no-repeat;
+  background-size: cover;
+}
+
+.wantedCard:nth-of-type(3) .wantedPic {
+  background: url("gimli.png") center no-repeat;
+  background-size: cover;
+}
+
+.description {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(130,130,130,0.7);
+}
+
+.wantedPic.disabled .description {
+  background-color: rgba(50,50,50,0.7);
+}
+
+.description h3 {
+  flex: 2;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+}
+
+
+.wantedPic.disabled .description h3 {
+  text-decoration: line-through #FF7700;
+}
+
+.reward {
+  width: 100%;
+  height: 75px;
+}
+
+.wantedPic.active .reward p {
+  text-align: center;
+  margin: 20px 25% 0;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
+
+.wantedPic.disabled .reward p {
+  color: #FF7700;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reward p strong {
+  color: orange;
+  font-weight: normal;
+}
+/* Faire disparaitre la description */
+.wantedPic.active .description:hover {
+  opacity: 0;
+}
+
+/* Section Get My Reward  */
+
+
+.btn.btn-custom-orange.active {
+  color: #FF7700;
+  background-color: white;
+  border: none;
+  font-size: 30px;
+  font-family: anironcregular, Arial, serif;
+}
+
+.coin {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+/* -------------------------------------- */
+/* Section Best Hunters                   */
+/* -------------------------------------- */
+
+.media-body h3 {
+  color: #FF7700;
+  font-size: 1.5rem;
+}
+
+.media-body p:first-of-type a {
+  color: black;
+  text-decoration: underline;
+}
+
+.media-body .btn.btn-custom-like.active {
+  background-color: #2B2B2B;
+  border: none;
+  color: #FF7700;
+  font-size: 25px;
+}
+
+/* -------------------------------------- */
+/* Section About the Ring                 */
+/* -------------------------------------- */
+
+/* Mise en forme générale */
+
+#theRing article {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border-radius: 10px 10px 0 0;
+  border-bottom: #FF7700 solid 3px;
+  margin: 0 20px 20px 20px;
+  background-color: #EDEDED;
+  color: #2B2B2B;
+}
+
+#theRing article header {
+  padding-left: 10px;
+  border-radius: 10px 10px 0 0;
+  background-color: #FF7700;
+  color: white;
+}
+
+#theRing article p {
+  margin: 20px 0 0 20px;
+}
+
+#theRing article header h3 {
+  margin: 3px;
+}
+
+/* Mise en forme du tableau */
+
+table {
+    border-collapse: collapse;
+  width:85%;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+caption {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+td, th {
+    border: 1px solid black;
+  text-align: center;
+}
+
+th {
+  color: white;
+  background-color: grey;
+  background-color: grey;
+}
+
+tr:nth-child(odd) {
+  background-color: #D6D6D6 ;
+}
+
+/* Mise en forme de la citation */
+
+.ringAwesomeContent {
+  margin: 15px 20px 15px 10px;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ringAwesomeContent .signature {
+  color: #D3D3D3;
+}
+
+.ringAwesomeContent p {
+  text-align: right;
+}
+
+.ringAwesomeContent img {
+  float: right;
+  border-radius: 50%;
+
+}
+
+.portraitCommentaire {
+  display: inline;
+}
+
+/* -------------------------------------- */
+/* Section Join the Army                  */
+/* -------------------------------------- */
+
+.armyPic {
+  background: url("army.png") center no-repeat;
+  background-size: contain;
+}
+
+.sauronPic {
+  background: url("weneedyou-1.png") center no-repeat;
+  background-size: contain;
+}
+
+.row.contactUsBtn {
+  min-height: 150px;
+}
+
+.row.contactUsBtn .btn {
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 20px;
+}
+
+/* -------------------------------------- */
+/* Section Contact us                     */
+/* -------------------------------------- */
+
+#contactUs form * {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+#contactUs {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.niceMap {
+  background: url("map.png") center no-repeat;
+  background-size: contain;
+}
+
+/* -------------------------------------- */
+/* Footer                                 */
+/* -------------------------------------- */
+
+footer.row {
+  background-color: #FF7700;
+  margin: 0;
+
+}
+
+footer ul {
+    list-style-type: none;
+
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.additionalFooterLinks {
+  font-weight: bold;
+  padding-right: 0;
+  margin-right: -15px;
+}
+
+.additionalFooterLinks li {
+  padding-right: -15px;
+}
+
+
+/* -------------------------------------- */
+/* Small screens                          */
+/* -------------------------------------- */
+
+@media (max-width:576px){
+/* rend le site responsive*/
+
+  .carousel.slide, .portraitCommentaire, .joinIllustration {
+    display: none;
+  }
+
+}
+
+
+
+/* -------------------------------------- */
+/* Large screens                          */
+/* -------------------------------------- */
+
+@media (min-width:992px){
+
+/* -------------------------------------- */
+/* Navbar                                 */
+/* -------------------------------------- */
+
+  .navbar.navbar-expand-lg .nav-item:not(:last-of-type) {
+    border-right: 1px solid white;
+  }
+
+  .nav.nav-tabs .nav-item {
+    width: 33%;
+  }
+
+}
